@@ -20,8 +20,8 @@ int main(){
 		if (isPrime(i)){
 			std::cout << i << std::endl;
 		}
-		else if (isPrime(i + 2)){
-			std::cout << i << std::endl;
+		if (isPrime(i + 2)){
+			std::cout << i + 2<< std::endl;
 		}
 	}
 	return 0;

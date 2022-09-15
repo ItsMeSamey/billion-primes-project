@@ -28,8 +28,8 @@
 ```
 
 ### 💻 How did I find the Primes?
-Using a simple C++ script with complexity of O(√n) which took about ``27 minute 11 seconds``. 
-Edit: should be about half that time now
+Using a simple C++ script with complexity of O(√n) which took about ``10 minute``.
+
 
 
 ### 🤔 Why , Why , Why?

@@ -28,7 +28,7 @@
 ```
 
 ### 💻 How did I find the Primes?
-Using a simple C++ script with complexity of O(√n) which took about ``10 minute``.
+Using a simple C++ script with complexity of O(√n) which took about ``10 minutes``.
 
 
 

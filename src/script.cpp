@@ -1,28 +1,40 @@
 #include <iostream>
 #include <math.h>
+#define uint unsigned int
 
-bool isPrime(int n){
-	if (n % 3 == 0){
-		return false;
-		}
-	for (int i = 5; i * i <= ceil(sqrt(n)) + 1; i += 6){
-		if (n % i == 0 || n % (i + 2) == 0){
-			return false;
-		}
-	}
-	return true;
+uint n,sqr,i,primes[3400],last=0;
+
+bool isPrime(){
+  for (uint i = 5; i < sqr; i += 6){
+    if (n % i == 0 || n % (i + 2) == 0){
+      return false;
+    }
+  }
+  return true;
+}
+
+bool fisPrime(){
+  for (uint i = 0; primes[i] < sqr; i++){
+    if (n % primes[i] == 0){
+      return false;
+    }
+  }
+  return true;
 }
 
 int main(){
-	std::cout << 2 << std::endl;
-	std::cout << 3 << std::endl;
-	for (int i = 5; i <= 1000000000; i = i + 6){
-		if (isPrime(i)){
-			std::cout << i << std::endl;
-		}
-		if (isPrime(i + 2)){
-			std::cout << i + 2<< std::endl;
-		}
-	}
-	return 0;
+  std::cout << "2\n3\n";
+  for (n = 7; n <= 31633; n += 8){
+    sqr = ceil(sqrt(n)) + 1;
+    if(isPrime()){primes[last++]=n;std::cout << n << std::endl;}
+    n -= 2;
+    if(isPrime()){primes[last++]=n;std::cout << n << std::endl;}
+  }
+  for (; n <= 1000000000; n += 8){
+    sqr = ceil(sqrt(n)) + 1;
+    if(fisPrime()){std::cout << n << std::endl;}
+    n -= 2;
+    if(fisPrime()){std::cout << n << std::endl;}
+  }
+  return 0;
 }
